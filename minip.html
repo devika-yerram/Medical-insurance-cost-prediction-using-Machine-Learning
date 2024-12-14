@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demographic Information</title>
+    <style>
+        body {
+            background-image: url('background_image.jpg'); /* Replace 'background_image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #333;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Demographic Information</h2>
+        <form action="/submit" method="post"> <!-- Change action attribute to specify where form data should be submitted -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="0" required>
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <label for="bmi">BMI:</label>
+            <input type="number" id="bmi" name="bmi" min="0" step="0.01" required>
+            <label for="children">Number of Children:</label>
+            <input type="number" id="children" name="children" min="0" required>
+            <label for="smoker">Smoker:</label>
+            <select id="smoker" name="smoker">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <label for="region">Region:</label>
+            <select id="region" name="region">
+                <option value="northeast">Northeast</option>
+                <option value="northwest">Northwest</option>
+                <option value="southeast">Southeast</option>
+                <option value="southwest">Southwest</option>
+            </select>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>E
